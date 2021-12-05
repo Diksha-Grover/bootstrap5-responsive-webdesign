@@ -22,8 +22,8 @@ body {
 
 .carousel-inner img {
   width: 100%;
-  height: 35rem;
-  object-fit: none;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption {
@@ -163,88 +163,6 @@ hr.light-100 {
   margin-bottom: 1rem;
 }
 
-/*---Media Queries --*/
-@media (max-width: 992px) {
-  .social a {
-    font-size: 4em;
-    padding: 2rem;
-  }
-}
-.carousel-control-prev {
-  display: none;
-}
-
-.carousel-control-next {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .carousel-caption h1 {
-    font-size: 350%;
-  }
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400;
-    padding-bottom: 0.2rem;
-  }
-  .carousel-caption .btn {
-    font-size: 95%;
-    padding: 8px 14px;
-  }
-
-  .carousel-control-prev {
-    display: none;
-  }
-
-  .carousel-control-next {
-    display: none;
-  }
-
-  .display-4 {
-    font-size: 200%;
-  }
-  .social a {
-    font-size: 2.5em;
-    padding: 1.2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .social a {
-    font-size: 2em;
-    padding: 1rem;
-  }
-  .carousel-caption h1 {
-    font-size: 250%;
-  }
-  .carousel-caption h3 {
-    font-size: 110%;
-  }
-  .carousel-caption .btn {
-    font-size: 90%;
-    padding: 4px 8px;
-  }
-  .carousel-indicators {
-    display: none;
-  }
-
-  .display-4 {
-    font-size: 160%;
-  }
-  .social a {
-    font-size: 2.5em;
-    padding: 0.7rem;
-  }
-}
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
 /*--- Fixed Background Image --*/
 figure {
   position: relative;
@@ -272,6 +190,78 @@ figure {
   background-size: cover;
   background-position: center center;
   /* it means position the picture at center both vertically and horizontally  */
+}
+
+/*---Media Queries --*/
+@media (min-width: 1200px) {
+  .carousel img {
+    height: 35rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .carousel img {
+    height: 31rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+  }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px 14px;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .social a {
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px 8px;
+  }
+  .display-4 {
+    font-size: 160%;
+  }
+  .social a {
+    font-size: 2.5em;
+    padding: 0.7rem;
+  }
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
 }
 
 /*--- Bootstrap Padding Fix --*/
